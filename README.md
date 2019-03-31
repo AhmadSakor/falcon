@@ -4,7 +4,7 @@ FALCON is an entity and relation linking framework over DBpedia.
 FALCON identifies the relations and entities in a short text or question. Then link them to their corresponding URI in DBpedia knowledge graph.
 
 
-[Demo](https://labs.tib.eu/falcon/)
+[Demo with API](https://labs.tib.eu/falcon/)
 
 
 To run the framework. You should first have an elasticsearch endpoint, and a DBpedia endpoint.
