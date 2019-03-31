@@ -1,5 +1,8 @@
 # FALCON
 
+[logo]: https://labs.tib.eu/falcon/static/img/logo.jpg "Logo"
+
+
 FALCON is an entity and relation linking framework over DBpedia.
 FALCON identifies the relations and entities in a short text or question. Then link them to their corresponding URI in DBpedia knowledge graph.
 
