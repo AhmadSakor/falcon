@@ -1,7 +1,7 @@
 # FALCON
 
 
-![alt text](https://labs.tib.eu/falcon/static/img/logo.jpg "Logo")
+![alt text](https://labs.tib.eu/info/fileadmin/_processed_/9/5/csm_logo_41f97fef0f.jpg "Logo")
 
 
 
