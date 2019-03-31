@@ -12,6 +12,7 @@ The elasticsearch dump can be found here:
 [Elastic Dump](https://drive.google.com/file/d/1z9azmdYgpV-vqlSFBruyAmxQ0FVCpvjg/view?usp=sharing)
 
 DBpedia endpoint must be changes in main.py
+
 `dbpediaSPARQL="http://node1.research.tib.eu:4001/sparql"
 dbpediaSPARQL2="http://node1.research.tib.eu:4001/sparql"`
 
