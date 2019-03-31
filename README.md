@@ -1,10 +1,5 @@
 # FALCON
 
-
-![alt text](https://labs.tib.eu/falcon/static/img/logo.jpg "Logo")
-
-
-
 FALCON is an entity and relation linking framework over DBpedia.
 FALCON identifies the relations and entities in a short text or question. Then link them to their corresponding URI in DBpedia knowledge graph.
 
@@ -23,6 +18,8 @@ DBpedia endpoint must be changes in main.py
 `dbpediaSPARQL2="http://node1.research.tib.eu:4001/sparql"`
 
 Then the function evaluate can be called to process a question.
+
+![alt text](https://labs.tib.eu/falcon/static/img/logo.jpg "Logo")
 
 
 
