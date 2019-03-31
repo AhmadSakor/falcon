@@ -1,6 +1,8 @@
 # FALCON
 
-[logo]: https://labs.tib.eu/falcon/static/img/logo.jpg "Logo"
+
+![alt text](https://labs.tib.eu/falcon/static/img/logo.jpg "Logo")
+
 
 
 FALCON is an entity and relation linking framework over DBpedia.
