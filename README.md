@@ -14,6 +14,7 @@ The elasticsearch dump can be found here:
 DBpedia endpoint must be changes in main.py
 
 `dbpediaSPARQL="http://node1.research.tib.eu:4001/sparql"
+
 dbpediaSPARQL2="http://node1.research.tib.eu:4001/sparql"`
 
 Then the function evaluate can be called to process a question.
