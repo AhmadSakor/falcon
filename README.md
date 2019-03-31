@@ -17,6 +17,10 @@ DBpedia endpoint must be changes in main.py
 
 `dbpediaSPARQL2="http://node1.research.tib.eu:4001/sparql"`
 
+Also Elasticsearch endpoint should be changes in Elastic/searchIndex.py:
+
+`es = Elasticsearch(['http://localhost:9200'])`
+
 Then the function evaluate can be called to process a question.
 
 ![alt text](https://labs.tib.eu/falcon/static/img/logo.jpg "Logo")
