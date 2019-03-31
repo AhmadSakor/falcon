@@ -24,6 +24,7 @@ Also Elasticsearch endpoint should be changes in Elastic/searchIndex.py:
 Then the function evaluate can be called to process a question.
 
 FALCON benchmariking for QALD-7 dataset using GERBIL
+
 [GERBIL](http://gerbil.aksw.org/gerbil/experiment?id=201812110001)
 
 
