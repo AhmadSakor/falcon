@@ -899,11 +899,11 @@ def evaluate(raw):
     
   
     ############        
-    #raw.append([[tup[1],tup[4]] for tup in mixedRelations])        
-    #raw.append([[tup[1],tup[4]] for tup in entities])
+    raw.append([[tup[1],tup[4]] for tup in mixedRelations])        
+    raw.append([[tup[1],tup[4]] for tup in entities])
     #############
-    raw.append(p_relation)
-    raw.append(r_relation)
+    #raw.append(p_relation)
+    #raw.append(r_relation)
     return raw
 
 
