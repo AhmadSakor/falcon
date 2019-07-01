@@ -3,6 +3,6 @@ spacy==2.0.12
 Flask==1.0.2
 nltk==3.3
 matplotlib==2.2.3
-requests==2.18.4
+requests==2.20.0
 pyspotlight==0.7.2
 SPARQLWrapper==1.8.2
