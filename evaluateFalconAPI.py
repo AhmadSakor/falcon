@@ -4,14 +4,7 @@ from evaluation import evaluation_paper as evaluation
 import csv
 
 
-
 headers = {'content-type': 'application/json', 'Accept-Charset': 'UTF-8'}
-
-
-
-
-
-
 
     
 def falcon_call(text):
