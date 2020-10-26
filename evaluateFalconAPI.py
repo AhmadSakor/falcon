@@ -2,13 +2,11 @@
 import requests
 from evaluation import evaluation_paper as evaluation
 import csv
-from elasticsearch import Elasticsearch
-from SPARQLWrapper import SPARQLWrapper, JSON
+
 
 
 headers = {'content-type': 'application/json', 'Accept-Charset': 'UTF-8'}
-es = Elasticsearch(['http://node1.research.tib.eu:9200/'])
-docType = "doc"
+
 
 
 
