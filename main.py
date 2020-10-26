@@ -2,7 +2,7 @@
 
 from src import stopwords
 from Elastic import searchIndex
-from src import evaluation
+from evaluation import evaluation_paper as evaluation
 import csv
 from nltk.corpus import wordnet as wn
 import nltk
