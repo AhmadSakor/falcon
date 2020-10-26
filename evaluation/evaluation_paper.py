@@ -157,13 +157,13 @@ def read_csv(filename):
     return rows        
     
 def read_LCQUAD():  
-    data = json.load(io.open('../data/lcquad_qaldformat.json', encoding='utf-8'))       
+    data = json.load(io.open('datasets/lcquad_qaldformat.json', encoding='utf-8'))       
     questions=[[question['question'][0]['string'],question['query']['sparql'],extract_relation2(question['query']['sparql']),extract_entities(question['query']['sparql'])] for question in data['questions']]
     return questions
 
 def read_LCQUAD2():
-    questions=read_csv('./data/LC-QUAD.csv')
-    queries=read_csv('./data/Question-SPARQL.csv')
+    questions=read_csv('datasets/LC-QUAD3253.csv')
+    queries=read_csv('datasets/Question-SPARQL_3253.csv')
     i=0
     for query in queries:
         questions[i].append(query[1])
@@ -174,23 +174,18 @@ def read_LCQUAD2():
 
 
 def read_QALD7():
-    data = json.load(io.open('../data/qald-7-train-multilingual.json', encoding='utf-8')) 
+    data = json.load(io.open('datasets/qald-7-train-multilingual.json', encoding='utf-8')) 
     questions=[[question['question'][0]['string'],question['query']['sparql'],extract_relation_QALD7(question['query']['sparql']),extract_entities_QALD7(question['query']['sparql'])] for question in data['questions']]
     return questions
 
 def read_QALD5():
-    data = json.load(io.open('../data/qald-5_train.json', encoding='utf-8')) 
+    data = json.load(io.open('datasets/qald-5_train.json', encoding='utf-8')) 
     questions=[[question['body'][0]['string'],question['query'],extract_relation_QALD7(question['query']),extract_entities_QALD7(question['query'])] for question in data['questions']]
     return questions
 
-def read_QALD5_2():
-    questions=read_csv('./data/questions_qald.csv')
-    #data = json.load(io.open('../data/questions_qald.cs', encoding='utf-8')) 
-    questions=[[question[1],question[1],extract_relations_CSV(question[2]),extract_entities_CSV(question[2])] for question in questions]
-    return questions
 
 def read_QALD6():
-    data = json.load(io.open('../data/qald-6-train-multilingual.json', encoding='utf-8')) 
+    data = json.load(io.open('datasets/qald-6-train-multilingual.json', encoding='utf-8')) 
     questions=[[question['question'][0]['string'],question['query']['sparql'],extract_relation_QALD7(question['query']['sparql']),extract_entities_QALD7(question['query']['sparql'])] for question in data['questions']]
     return questions
 
