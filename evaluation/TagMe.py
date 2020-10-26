@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import evaluation
+import evaluation_paper as evaluation
 import requests
 import csv
 
