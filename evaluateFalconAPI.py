@@ -88,7 +88,7 @@ questions = evaluation.read_QALD7()
 
 
 counter = 0
-for question in questions[:10]:
+for question in questions:
     if len(question[1])==0:
         continue
     entities_falcon,relations_falcon = falcon_call(question[0])        
