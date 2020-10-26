@@ -9,15 +9,10 @@ from SPARQLWrapper import SPARQLWrapper, JSON
 headers = {'content-type': 'application/json', 'Accept-Charset': 'UTF-8'}
 es = Elasticsearch(['http://node1.research.tib.eu:9200/'])
 docType = "doc"
-dbpediaSPARQL="http://node1.research.tib.eu:4001/sparql"
 
 
-def SPARQL_call(query,endpoint):
-    sparql = SPARQLWrapper(endpoint)
-    sparql.setQuery(query)
-    sparql.setReturnFormat(JSON)
-    results = sparql.query().convert()
-    return results
+
+
 
 
     
