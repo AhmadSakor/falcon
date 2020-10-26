@@ -2,7 +2,7 @@
 
 import requests
 import csv
-import evaluation
+import evaluation_paper as evaluation
 
 
 def dbpeida_spotlight_call(text):
