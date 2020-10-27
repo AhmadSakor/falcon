@@ -603,86 +603,6 @@ def split_base_on_s(combinations):
             result.append(comb)
     return result
 
-def process_word_E_long(question):
-    #print(question)
-    #startTime=time.time() 
-    global count
-    k=1
-
-    entities=[]
-    
-    #question=question[0].lower() + question[1:]
-    originalQuestion=question
-    question=question.replace("?","")
-    question=question.replace(".","")
-    question=question.replace("!","")
-    question=question.replace("'s","")
-    question=question.replace("'","")
-    question=question.replace("\\","")
-    question=question.replace("#","")
-    question=question[0].lower()+question[1:]
-    questionStopWords=stopwords.extract_stop_words_question(question,stopWordsList)
-    combinations=get_question_combinatios(question,questionStopWords)  
-    combinations=split_base_on_verb(combinations,originalQuestion)
-    for idx,term in enumerate(combinations):
-        if len(term)==0:
-            continue
-        if term[0].istitle():
-            continue;
-        ontologyResults=searchIndex.ontologySearch(term)
-        propertyResults=searchIndex.propertySearch(term)
-        if len(ontologyResults) > 2 or len(propertyResults) > 0:
-            del combinations[idx]
-            
-    combinations=merge_comb_stop_words(combinations,question,questionStopWords)
-    combinations=sort_combinations(combinations,question)
-    combinations=merge_entity_prefix(question,combinations,originalQuestion)
-    combinations,compare_found=split_bas_on_comparison(combinations)
-    combinations=extract_abbreviation(combinations)
-    try:
-        for term in combinations:
-            #print(term)
-            entityResults=searchIndex.entitySearch(term)
-            if len(entityResults)>0:
-                entities.append([entity+[term] for entity in entityResults])
-            
-    except:
-        return []
-    results=[]
-    for raw in entities:
-        for entity in sorted(raw, reverse=True, key=lambda x: x[2])[:k]:
-            results.append(entity)
-   
-    #print("Entities:")
-    #print(entities)
-    return [[entity[1],entity[4]] for entity in results]
-def process_word_E(question):
-    #print(question)
-    startTime=time.time() 
-    global count
-    k=1
-
-    entities=[]
-    #question=question[0].lower() + question[1:]
-    question=question.replace("?","")
-    question=question.replace(".","")
-    question=question.replace("!","")
-    question=question.replace("'s","")
-    question=question.replace("'","")
-    question=question.replace("\\","")
-    question=question.replace("#","")
-    
-  
-    try:
-        entityResults=searchIndex.entitySearch(question)
-    except:
-        return []
-    for entity in sorted(entityResults, reverse=True, key=lambda x: x[2])[:k]:
-        entities.append(entity)
-   
-    #print("Entities:")
-    #print(entities)
-    return [[entity[1],entity[2]] for entity in entities]
 
 def extract_abbreviation(combinations):
     new_comb=[]
@@ -975,9 +895,8 @@ def datasets_evaluate():
     y=[question[4] for question in questions[startQ:endQ]]
 
 
-#process_text_E_R("what is the capital of germany")
-#datasets_evaluate()           
-#process_text_E_R('In which UK city are the headquarters of the MI6?')      
-#process_word_E_long('Who painted The Storm on the Sea of Galilee?')  
+
+   
+
     
 
